@@ -13,7 +13,24 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='text' /><meta property='article:tag' content='tag with whitespaces' /><meta property='article:published_time' content='2019-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-03-09T00:00:00&#43;00:00'/><meta property='og:image' content='/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg' />
 <meta name="twitter:title" content="Placeholder Text">
 <meta name="twitter:description" content="Lorem Ipsum Dolor Si Amet"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg' />
+    <meta name="twitter:image" content='/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg' /><style>
+	
+    :root {
+        --article-font-family: "League Spartan", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=League Spartan:wght@320;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
     </head>
     <body class="
     article-page
@@ -60,7 +77,6 @@
         
         
         
-
         <li >
             <a href='/' >
                 
@@ -81,7 +97,20 @@
         </li>
         
         
-
+        <li >
+            <a href='/submit/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+</svg>
+                
+                <span>Submit</span>
+            </a>
+        </li>
+        
+        
         <li >
             <a href='/about/' >
                 
@@ -101,7 +130,6 @@
         </li>
         
         
-
         <li >
             <a href='/archives/' >
                 
@@ -122,7 +150,6 @@
         </li>
         
         
-
         <li >
             <a href='/search/' >
                 
@@ -142,7 +169,6 @@
         </li>
         
         
-
         <li >
             <a href='/links/' >
                 
@@ -474,6 +500,8 @@
 </style>
 
 <script>
+    let utterancesLoaded = false;
+
     function setUtterancesTheme(theme) {
         let utterances = document.querySelector('.utterances iframe');
         if (utterances) {
@@ -489,10 +517,14 @@
 
     addEventListener('message', event => {
         if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
         setUtterancesTheme(document.documentElement.dataset.scheme)
     });
 
     window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
         setUtterancesTheme(e.detail)
     })
 </script>
@@ -612,6 +644,23 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<style>
+	
+    :root {
+        --article-font-family: "League Spartan", var(--base-font-family);
+    }
+</style>
 
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=League Spartan:wght@320;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
     </body>
 </html>
